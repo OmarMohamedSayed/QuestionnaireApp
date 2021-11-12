@@ -1,3 +1,0 @@
-VUE_APP_API_ACCOUNT=http://127.0.0.1:8000/api/customers/
-VUE_APP_API_QUESTIONS=http://127.0.0.1:8000/api/questions/
-VUE_APP_API_CUSTOMERANSWERS=http://127.0.0.1:8000/api/customeranswers/countanswers/
