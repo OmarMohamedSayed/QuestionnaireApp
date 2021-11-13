@@ -53,5 +53,6 @@ to insert your questions and answers
 
 "customer-answers": "http://127.0.0.1:8000/api/customeranswers/"
 
-"count-customers-answers":"http://127.0.0.1:8000/api/customeranswers/countanswers/<pk>" ("Note: pk = question's id you want to count it's feedback")
+"count-customers-answers":"http://127.0.0.1:8000/api/customeranswers/countanswers/<pk>" 
+ ("Note: pk = question's id you want to count it's feedback")
  
