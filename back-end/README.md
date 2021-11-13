@@ -5,7 +5,7 @@
 The first thing to do is to clone the repository:
 
 ```sh
-$ https://github.com/OmarMohamedSayed/QuestionnaireApp.git
+$ git clone https://github.com/OmarMohamedSayed/QuestionnaireApp.git
 $ cd QuestionnaireApp/back-end
 ```
 
