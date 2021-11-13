@@ -1,4 +1,4 @@
-# GoCardless sample application
+# Questionnaire App
 
 ## Setup
 
@@ -43,6 +43,12 @@ And navigate to `http://127.0.0.1:8000/admin/`
 to insert your questions and answers
 
 ## Model 
-
 ![Questionaire UML](../assets/questionnaire_app.png)
 
+## Api
+
+"questions": "http://127.0.0.1:8000/api/questions/",
+"customers": "http://127.0.0.1:8000/api/customers/",
+"customer-answers": "http://127.0.0.1:8000/api/customeranswers/"
+"count-customers-answers":"http://127.0.0.1:8000/api/customeranswers/countanswers/<pk>" (pk = question's id you want to count it's feedback)
+ 
