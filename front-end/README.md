@@ -22,6 +22,7 @@ When it comes to collecting feedback, Questionnaire-App survey questions are one
 1. Install all packages
 
    ```bash
+   cd QuestionnaireApp/front-end
    npm install
    ```
 
