@@ -1,5 +1,5 @@
 # Questionnaire App
-
+![Admin Dashboard](../assets/djangodashboard.png)
 ## Setup
 
 The first thing to do is to clone the repository:
@@ -47,8 +47,11 @@ to insert your questions and answers
 
 ## Api
 
-"questions": "http://127.0.0.1:8000/api/questions/",
-"customers": "http://127.0.0.1:8000/api/customers/",
+"questions": "http://127.0.0.1:8000/api/questions/"
+
+"customers": "http://127.0.0.1:8000/api/customers/"
+
 "customer-answers": "http://127.0.0.1:8000/api/customeranswers/"
-"count-customers-answers":"http://127.0.0.1:8000/api/customeranswers/countanswers/<pk>" (pk = question's id you want to count it's feedback)
+
+"count-customers-answers":"http://127.0.0.1:8000/api/customeranswers/countanswers/<pk>" ("Note: pk = question's id you want to count it's feedback")
  
