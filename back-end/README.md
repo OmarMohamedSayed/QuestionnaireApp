@@ -1,5 +1,16 @@
 # Questionnaire App
 ![Admin Dashboard](../assets/djangodashboard.png)
+![Admin Dashboard](../assets/questionsDashboard.png)
+![Admin Dashboard](../assets/questionwithanswers.png)
+
+## Features
+1. Authentication (login, register) with JWT Token
+2. Add Sections
+3. Add Questions and Answers
+4. Make customers choose and submit his answers
+5. view customer answers
+6. Customer can submit many times
+
 ## Setup
 
 The first thing to do is to clone the repository:
@@ -34,6 +45,18 @@ Create admin user to insert questions and control all application through
 ```sh
 (venv)$ python manage.py createsuperuser
 ```
+Before run your application you need to create database with name questionnaire
+```sh
+(venv)$ sudo su - postgres psql
+postgres=# create database questionnaire;
+```
+Then close terminal and run 
+```sh
+(venv)$ python manage migrate
+(venv)$ python manage makemigrations app
+(venv)$ python manage migrate
+```
+
 
 Now You can run your application through
 ```sh
@@ -47,12 +70,16 @@ to insert your questions and answers
 
 ## Api
 
+"register":  "http://localhost:8000/api/register/"
+
+"login": " http://localhost:8000/api/login/"
+
+"refresh token": "http://localhost:8000/api/token/refresh/"
+
 "questions": "http://127.0.0.1:8000/api/questions/"
 
 "customers": "http://127.0.0.1:8000/api/customers/"
 
 "customer-answers": "http://127.0.0.1:8000/api/customeranswers/"
 
-"count-customers-answers":"http://127.0.0.1:8000/api/customeranswers/countanswers/<pk>" 
- ("Note: pk = question's id you want to count it's feedback")
- 
+
