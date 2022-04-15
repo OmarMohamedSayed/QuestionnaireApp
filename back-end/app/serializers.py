@@ -1,6 +1,6 @@
 from .models import *
 from rest_framework import serializers
-
+from django.contrib.auth.models import User
 class ChoiceToSerializer(serializers.ModelSerializer):
     class Meta:
         model = Choice
@@ -16,12 +16,12 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     customeranswer = CustomerAnswerSerializer(source='customeranswer_set', many=True)
     class Meta:
         model = Customer
-        fields = ('name','email','phone_number','address','nationality','birthday','gender','customeranswer')
-
+        fields = ('name','phone_number','username','address','nationality','birthday','gender','customeranswer')
+        
     def create(self, validated_data):
         customeranswers = validated_data.pop('customeranswer_set')
-       
-        customer = Customer.objects.create(**validated_data)
+        user = User.objects.get(username = validated_data.get('username'))
+        customer = Customer.objects.create(user=user,**validated_data)
 
         for customeranswer in customeranswers:
             customeranswer['customer'] = customer
@@ -32,7 +32,7 @@ class QuestionSerializer(serializers.ModelSerializer):
     choice = ChoiceToSerializer(source='choice_set', many=True)    
     class Meta:
         model = Question
-        fields = ('id','question_category', 'question_text','choice')
+        fields = ('id','question_description', 'question_text','choice')
     
     def create(self, validated_data):
         choices = validated_data.pop('choice_set')
@@ -40,3 +40,4 @@ class QuestionSerializer(serializers.ModelSerializer):
         for choice in choices:
             Choice.objects.create(question=question, **choice)
         return question
+
